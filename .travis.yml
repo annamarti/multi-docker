@@ -13,9 +13,9 @@ script:
 
 after_success:
   - docker build -t annamart/multi-client ./client
-  - docker build -t annamart/mult-nginx ./nginx
-  - docker build -t annamart/mult-server ./server
-  - docker build -t annamart/mult-worker ./worker
+  - docker build -t annamart/multi-nginx ./nginx
+  - docker build -t annamart/multi-server ./server
+  - docker build -t annamart/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
